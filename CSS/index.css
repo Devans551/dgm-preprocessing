@@ -63,8 +63,7 @@ header .info-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  border-bottom: red solid 1px;
+  height: 60px;
 }
 header .info-bar h3 {
   display: flex;
