@@ -1,10 +1,126 @@
 html {
     background-color: @main-background-color;
-    body {
-        font-family: @font-stack;
+    font-family: @font-stack;
+    .container {
+        .info-bar {
+            .centered;
+            height: 60px;
+            h3 {
+                .centered;
+                font-size: 16px;
+                color: @font-color;
+                padding-right: 20px;
+            }
+            .deal-btn {
+                .custom-btn(auto, 20px, white, 12px, black);
+            }
+        }
     }
 }
 
-section {
-    width: 100%;
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+    .left-content {
+        width: 50%;
+        img {
+            width: @img;
+        }
+    }
+    .right-content {
+        width: 45%;
+    }
 }
+.home {
+    .top-photo {
+        .custom-sections(flex-start, 5px solid white);
+        img {
+            position: relative;
+            width: @img;
+        }
+        .shop-btn {
+            position: absolute;
+            align-self: flex-start;
+            margin-top: 40px;
+            margin-left: 20px;
+            .custom-btn(auto, 25px, white, 15px, black);
+        }
+    }
+    .middle-photo {
+        .custom-sections(flex-start, 5px solid white);
+        img {
+            position: relative;
+            max-width: @img-width;
+        }
+        .shop-btn {
+            position: absolute;
+            align-self: flex-start;
+            margin-top: 40px;
+            margin-left: 20px;
+            .custom-btn(auto, 25px, white,15px, black);
+        }
+    }
+    .middle-photo {
+        .custom-sections(flex-start, 5px solid white);
+        img {
+            position: relative;
+            max-width: @img-width;
+        }
+        .shop-btn {
+            position: absolute;
+            align-self: flex-start;
+            margin-top: 40px;
+            margin-left: 20px;
+            .custom-btn(auto, 25px, white,15px, black);
+        }
+    }
+    .bottom-photo {
+        .custom-sections(flex-start, 5px solid white);        
+        img {
+            position: relative;
+            max-width: @img;
+        }
+        .shop-btn {
+            position: absolute;
+            align-self: flex-start;
+            margin-top: 40px;
+            margin-left: 20px;
+            .custom-btn(auto, 25px, white,15px, black);
+        }
+    }
+}
+.navBar-main {
+    @media @mobile {
+        .nav-search {
+            visibility: hidden;
+        }
+    }
+    @media @tablet {
+        
+    }
+}
+
+ .about {
+    display: flex;
+    flex-wrap: wrap;
+    @media @mobile {
+        .left-content { 
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .right-content { 
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    @media @tablet {
+        .left-content { 
+            width: 100%;
+        }
+        .right-content { 
+            width: 100%;
+        }
+    }
+} 

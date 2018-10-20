@@ -2,4 +2,42 @@
 @main-background-color: rgb(247, 247, 247);
 @main-line-color: rgb(229, 229, 229);
 @font-color: black;
+@secondary-font-color: rgb(92, 91, 91);
 @nav-background: white;
+@img-width: 100%;
+@mobile: ~"(max-width: 500px)";
+@tablet: ~"(max-width: 900px)";
+
+
+.centered(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Mixins
+.custom-layout(@spacing) {
+    display: flex;
+    justify-content: @spacing;
+}
+
+.custom-sections(@align-items, @border-bottom) {
+    display: flex;
+    align-items: @align-items;
+    border-bottom: @border-bottom;
+}
+.custom-btn(@width, @height, @btn-background, @font-size, @font-color) {
+    width: @width;
+    height: @height;
+    background: @btn-background;
+    font-size: @font-size;
+    color: @font-color;
+    border: none;
+    border-radius: 10px;
+    
+    &:active {
+      background: @font-color;
+      color: @btn-background;
+    }
+}
+
